@@ -61,3 +61,39 @@
 .column-1 {
   grid-column: 1;
 }
+
+.dataset-card h5 {
+  .small-margin;
+}
+
+.dataset-card h4 {
+  .medium-margin;
+}
+
+.dataset-card h3 {
+  .medium-margin;
+}
+
+.description {
+  .large-margin;
+  padding-bottom: 25px;
+}
+
+body {
+  font-family: @font-family;
+  background: @background-colour;
+  display: grid;
+  grid-template-columns: 10% 75% 10%;
+}
+
+ul#initialDatasets {
+  list-style: none;
+  .column-2;
+  justify-self: start;
+  padding-inline-start: 0em;
+  margin: 0px;
+  li {
+    padding: 10px 0;
+    justify-self: start;
+  }
+}

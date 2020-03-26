@@ -46,3 +46,33 @@
 .column-1 {
   grid-column: 1;
 }
+.dataset-card h5 {
+  margin: 1px;
+}
+.dataset-card h4 {
+  margin: 5px 0px;
+}
+.dataset-card h3 {
+  margin: 5px 0px;
+}
+.description {
+  margin: 25px 0px;
+  padding-bottom: 25px;
+}
+body {
+  font-family: Arial;
+  background: #f4f4f4;
+  display: grid;
+  grid-template-columns: 10% 75% 10%;
+}
+ul#initialDatasets {
+  list-style: none;
+  grid-column: 2;
+  justify-self: start;
+  padding-inline-start: 0em;
+  margin: 0px;
+}
+ul#initialDatasets li {
+  padding: 10px 0;
+  justify-self: start;
+}
