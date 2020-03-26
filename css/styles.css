@@ -1,0 +1,48 @@
+.description {
+  display: none;
+}
+.icon {
+  margin: auto;
+  justify-self: auto;
+  grid-column: 1;
+}
+.universals {
+  grid-column: 2;
+}
+.heading {
+  font-weight: bold;
+}
+#selector {
+  grid-column: 2;
+  justify-self: start;
+}
+.description-button {
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  font-family: Arial;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+}
+.description-button:hover {
+  text-decoration: underline;
+}
+.dataset-card {
+  margin: 20px 0px;
+}
+.small-margin {
+  margin: 1px;
+}
+.medium-margin {
+  margin: 5px 0px;
+}
+.large-margin {
+  margin: 25px 0px;
+}
+.column-2 {
+  grid-column: 2;
+}
+.column-1 {
+  grid-column: 1;
+}

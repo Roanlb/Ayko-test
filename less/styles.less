@@ -1,2 +1,63 @@
 @background-colour: #f4f4f4;
 @font-family: Arial;
+
+.description {
+  display: none;
+}
+
+.icon {
+  margin: auto;
+  justify-self: auto;
+  .column-1;
+}
+
+.universals {
+  .column-2;
+}
+
+.heading {
+  font-weight: bold;
+}
+
+#selector {
+  .column-2;
+  justify-self: start;
+}
+
+.description-button {
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  font-family: @font-family;
+  color: black;
+  cursor: pointer;
+  .heading;
+}
+
+.description-button:hover {
+  text-decoration: underline;
+}
+
+.dataset-card {
+  margin: 20px 0px;
+}
+
+.small-margin {
+  margin: 1px;
+}
+
+.medium-margin {
+  margin: 5px 0px;
+}
+
+.large-margin {
+  margin: 25px 0px;
+}
+
+.column-2 {
+  grid-column: 2;
+}
+
+.column-1 {
+  grid-column: 1;
+}
