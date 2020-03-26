@@ -89,7 +89,7 @@ $data = json_decode($data_json);
   <option value='temporal'>Temporal</option>
 </select>
 
- <ul id="initialDatasets">
+<ul id="initialDatasets">
 
 <?php
 
@@ -101,12 +101,35 @@ foreach ($data as $dataset) {
    <p class='description' id=$id>$dataset->description</p>
     <h5 class='identifier'>Identifier: " . substr($dataset->identifier, -7) . " </h5> 
     <h5>Date modified: $dataset->modified</h5>
-    <h5>Publisher/Point of contact: $dataset->contactpoint_fn</h5>";
+    <h5>Publisher/Point of contact: $dataset->contactpoint_fn</h5>
+    <h5>Temporal: " . substr($dataset->temporal, 0, 9) . substr($dataset->temporal, 18, -9) . "</h5>
+    <h5>Spatial coordinates: "; 
+
+  if (is_array($dataset->spatial->coordinates[0]) == 1) {
+  foreach($dataset->spatial->coordinates[0] as $coordinates) {
+    echo "[ ";
+    foreach($coordinates as $coordinate) {
+      echo strval($coordinate) . " ";
+    }
+    echo "] ";
+  }
+  echo "</h5></li>";
+  $id = $id + 1;
 }
 
+else {
+  echo "[";
+  foreach($dataset->spatial->coordinates as $coordinate) {
+  echo strval($coordinate) . " "; 
+}
+  echo "] </h5></li>"; 
+  $id = $id + 1;
+ }
+
+}
 ?>
 
- </ul>
+</ul>
 
 </body>
 </html>
